@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://kit.fontawesome.com/537c77d3aa.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Material</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+    
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html #home">LMS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="home.html #home">Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="home.html #about">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="home.html #courses">Courses</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="home.html #contactUs">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="account.html" id="yourAccount" style="display: none;">My Account</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="adminDashboard.html" id="admin" style="display: none;">Dashboard <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="accuser">Welcome, <span id="user"></span>!</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="signup.html" id="signup">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="signup.html" id="logout" onclick="logout()" >Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="materials">
+    <div class="container">
+        <h2>OOP Course</h2>
+        <h4>Course Materials</h4>
+        <a id="pdfLink" href="./pdfs/Object-Oriented Programming in C++ (4th Edition) by Robert Lafore.www.eeeuniversity.com.pdf" target="_blank" download>Object-Oriented Programming in C++ PDF</a>
+        <input type="file" id="pdfFile" accept="application/pdf" onchange="updateLink()">
+        <label for="pdfFile" id="pdfBtn" style="display: none;">Upload Materials</label>
+        <div id="pdfContainer"></div>
+        <div class="video-container">
+           <!-- <iframe src="https://www.youtube.com/embed/videoseries?si=G8P5bpxuvIE-tdzw&amp;list=PLISTUNloqsz0z9JJJke7g7PxRLvy6How9" frameborder="0" allowfullscreen></iframe>-->
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=eaD3VY0hHpslVw9D&amp;list=PLISTUNloqsz0z9JJJke7g7PxRLvy6How9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div id="assessments">
+            <h4>Assessments</h4>
+            <table>
+                <tr><th>Title</th><th>Due Date</th></tr>
+                    <tr>
+                        <td><a href="assessment1.html"> Assessment 1</a></td>
+                        <td>15/11/2023</td>
+                        
+                    </tr>
+                    <tr>
+                        <td><a> Assessment 2</a></td>
+                        <td>30/11/2023</td>
+                        
+                    </tr>
+                    
+            </table>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scriptHome.js"></script>
+</body>
+</html>

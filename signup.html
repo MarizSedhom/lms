@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://kit.fontawesome.com/537c77d3aa.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <title>Sign up</title>
+        <link rel="stylesheet" href="styles.css">
+
+        <script>
+            
+        </script>
+    </head>
+    <body>
+      <div class="container">
+        <div id="signup">
+          <div class="row">
+            <div class="col-md-8">
+            <div class="signImg">
+              <img src="./img/signup.jpg">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h2>Sign Up</h2>
+            <label for="newuser">Username:</label><br>
+            <input type="text" id="newuser" name="newuser"><br>
+            <label for="newemail">Email:</label><br>
+            <input type="email" id="newemail" name="newuser"><br>
+            <label for="newpwd">Password:</label><br>
+            <input type="password" id="newpwd" name="newpwd"><br><br>
+            <div class="signButton"><a onclick="signUp()">Sign Up</a></div>
+            <input type="checkbox" id="adminCheckSign">
+            <label for="adminCheckSign"> Sign Up as Admin</label>
+            <div><a onclick="showLogin()">already have account ? Login</a></div>
+          </div>
+          </div>
+          </div>
+          
+          <div id="login" style="display: none;">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="loginImg">
+                  <img src="./img/login.jpg">
+                </div>
+              </div>
+              <div class="col-md-4">
+            <h2>Login</h2>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="pwd" name="pwd"><br><br>
+            <div class="loginButton"><a onclick="login()">Login</a></div>
+            <input type="checkbox" id="adminCheck" name="adminCheck">
+            <label for="adminCheck"> Login as Admin</label>
+            <div><a onclick="showSignUp()">First time? Sign Up</a></div>
+          </div>
+          </div>
+        </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>

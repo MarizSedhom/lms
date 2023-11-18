@@ -1,13 +1,15 @@
+// This variable is used to track whether a user is logged in or not.
 var logged=true;
+
+// This function is executed when the window has finished loading.
 window.onload = function() {
+  // Retrieve user information from local storage
     var user = localStorage.getItem("currentUser");
     var userType = localStorage.getItem("userType");
-    console.log(user)
-    console.log(userType)
-    console.log(typeof userType)
-    console.log(userType.length)
 
+    // Check if a user is logged in
     if(user) {
+      // Check the user type and update the name accordingly
       if(userType == "admin") {
         console.log("is admin home")
         document.getElementById("user").textContent = "Admin " + user;
@@ -16,27 +18,25 @@ window.onload = function() {
       }
       else if(userType == "user") {
         document.getElementById("user").textContent = user;
-        //document.getElementById('admin').style.display='none';
       }
       else{
         document.getElementById("user").textContent ="User "
       }
     }
     else{
+      // If no user is found, set the logged variable to false
         logged=false;
     }
     if (logged) {
-        //document.getElementById('user').textContent = user;
         document.getElementById('signup').style.display = 'none';
         document.getElementById('logout').style.display = 'block';
         if(userType == "user"){
            document.getElementById('yourAccount').style.display='block';
-           
+           // Hide admin buttons for regular users
            var elements = document.getElementsByClassName('adminbtn');
            for(var i = 0; i < elements.length; i++){
               elements[i].style.display = 'none';
             }
-            //document.getElementById('pdfBtn').style.display='none';
         }
         else{
           document.getElementById('pdfBtn').style.display='inline-block';
@@ -58,31 +58,15 @@ function logout() {
     window.location.href = "login.html";
 }
 /******************************** */
-
-/************************************************/
-
     function removeCard(e) {
       // Prevent the default action of the button
       e.preventDefault();
-  
       // Remove the card
       e.target.closest(".card").remove();
   }
 /****************************************** */
-var totalVideos = 10; // Total number of videos in the course
-var watchedVideos = 5; // Number of videos watched
-
-function updateProgressBar() {
-  var progressBar = document.getElementById('progressBar');
-  var percentageWatched = (watchedVideos / totalVideos) * 100;
-  progressBar.style.width = percentageWatched + '%';
-}
-
-// Call this function whenever a video is watched
-function videoWatched() {
-  watchedVideos++;
-  updateProgressBar();
-}
+//updates the UI by creating a link to a PDF file selected by the user
+// The link is configured to open in a new tab ('_blank') and allows the user to download the file with its original name.
 function updateLink() {
     var file = document.getElementById('pdfFile').files[0];
     var link = document.createElement('a');

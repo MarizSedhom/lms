@@ -232,18 +232,6 @@ body #home{
         
       
 }
-/*#contactUs .container> div {
-    flex: 1; 
-    min-width: 300px; 
-    
-  }
-#contactUs .contact .col-md-1{
-    text-align: right;
-}
-#contactUs .floatedContact{
-    background-color: #e3efff ;
-    
-}*/
 #contactUs .nonFloatedContact{
     text-align: center;
 }
@@ -322,28 +310,6 @@ body #home{
     color: #161688;
    
 }
-/*.f_social_icon i{
-    display: inline-block;
-    padding: 0px 7px;
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    font-size: 14px;
-    line-height: 45px;
-    color: #858da8;
-    margin-right: 10px;
-    background: #ebeef5;
-    text-align: center;
-}
-.f_social_icon i:hover{
-    background: #c9a581;
-    color: #fff;
-    transition: 0.4s;
-}
-.f_social_icon li {
-    display: inline-block;
-    margin-bottom: 35px;
-}*/
 .follow .p{
     color: #161688;
     padding: 3px 8px;
